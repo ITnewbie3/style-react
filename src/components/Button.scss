@@ -1,0 +1,65 @@
+$blue : #228be6;
+.button { 
+    color:white;
+    font-weight: bold;
+    outline: none;
+    border-radius: 6px;
+    border:none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 16px;
+    font-size: 18px;
+    background: $blue;
+    
+    & + &{
+        margin-left: 10px;
+    }
+    //사이즈 관리
+    &.large {
+        padding-top:15px;
+        padding-bottom: 15px;
+        width:160px;
+    }
+    &.medium{
+        padding-top:10px;
+        padding-bottom: 10px;
+        width:160px;
+    }
+    &.small{
+        padding-top : 5px;
+        padding-bottom: 5px;
+        width:160px;
+    }
+    &.big{
+        width:100%;
+    }
+    // 색상 관리
+    &.black{
+        background: black;
+    }
+    &.pink{
+        background: pink;
+    }
+    &.white{
+        background: white;
+    }
+
+    // 선관리
+    &.one{
+        border: 1px solid $blue;
+        color: $blue;
+    }
+    &.two{
+        border: 1px solid black;
+        color: black;
+    }
+    &.thr{
+        border: 1px solid pink;
+        color:pink;
+    }
+
+    &:hover {
+        // background: lighten($blue, 40%); // 색상 40% 밝게
+        background: darken($blue, 40%); // 색상 40% 어둡게
+    }
+}
